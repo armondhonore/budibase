@@ -1,0 +1,21 @@
+application:
+  name: budibase
+  pods:
+  - name: app
+    image: budibase/budibase:latest
+    path: /
+    servicePorts:
+    - 80
+    vars:
+      JWT_SECRET: "a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4"
+      MINIO_ACCESS_KEY: "budibase"
+      MINIO_SECRET_KEY: "budibase123"
+      COUCH_DB_USER: budibase
+      COUCH_DB_PASSWORD: budibase
+      INTERNAL_API_KEY: "a1b2c3d4e5f6a1b2"
+      BB_ADMIN_USER_EMAIL: "armond@nexlayer.com"
+      BB_ADMIN_USER_PASSWORD: "nexlayer2024"
+    volumes:
+    - name: budibase-data
+      mountPath: /data
+      size: 10Gi
