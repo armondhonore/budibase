@@ -2,7 +2,7 @@ application:
   name: budibase
   pods:
   - name: app
-    image: budibase/budibase:latest
+    image: mirror.gcr.io/budibase/budibase:latest
     path: /
     servicePorts:
     - 80
